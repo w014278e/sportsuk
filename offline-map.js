@@ -1,0 +1,1 @@
+document.getElementById('nextMatchLocation').classList.add('offline-map');

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SportsUK - News</title>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=description content="SportsUK">
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="msapplication-TileColor" content="#D6751E">
+ 
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SportsUK">
+    <meta name="application-name" content="SportsUK">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/icons//apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/icons//apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+      
+      
+    <link rel="manifest" href="./manifest.json">
+   
+      <meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#D6751E">
+      
+      <link rel="stylesheet" href="min-style.css">
+    <link rel="stylesheet" href="styles.css">
+   
+  </head>
+ <body>
+
+       
+      
+  <div class="app app__layout">
+    <header>
+      <span class="header__icon">
+        <svg class="menu__icon no--select" width="24px" height="24px" viewBox="0 0 48 48" fill="#fff">
+          <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
+        </svg>
+      </span>
+
+      <span class="header__title no--select">SportsUK</span>
+    </header>
+
+    <div class="menu">
+      <div class="menu__header">
+          
+        </div>
+      <ul class="menu__list">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="news.html">News</a>
+        </li>
+         <li>
+          <a href="results.html">Results</a>
+        </li>
+          <li>
+          <a href="feedback.html">Feedback</a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu__overlay"></div>
+
+    <div class="app__content">
+                
+        
+    <h3>News</h3>
+        <div id="footballMatchJSONinfo" class="mdl-grid portfolio-max-width">
+<p id="offlineMode">Connect to a network in order to view the latest football news.</p>
+             
+</div>
+        <h4>Next Match</h4>
+       
+        <img class="nextMatchLogos" src="images/arsenallogo.gif" width="160" height="200" alt="Arsenal logo">
+        <h2 id="nextmatchText">VS</h2>
+        
+        <img class="nextMatchLogos" src="images/chelsealogo.gif" width="180" height="200" alt="Chelsea logo">
+     
+        <p id="nextMatchInfo">Sat 27 May 2017, Kick off: 3pm, Old Trafford<p>
+        <div id="nextMatchLocation" style="height: 300px;"></div>
+                <script>
+                function initMap() {
+                    var myLocation = {lat: 53.463059, lng: -2.291340};
+                    var map = new google.maps.Map(document.getElementById('nextMatchLocation'), {
+                    zoom: 13,
+                    center: myLocation
+                    });
+                    var marker = new google.maps.Marker({
+                    position: myLocation,
+                    map: map,
+                        title: "Location for the next football match"
+                    });
+                }
+                </script>
+                <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4r037t9M4xqaHF8RR2p2mQqiWhgmeeAk&callback=initMap">
+                </script>
+        <p id="copyrightarticle">News articles &copy Talksport</p>
+       
+        
+      </div>
+  
+    
+
+      <script src="scripts.js"></script>
+   
+  </body>
+</html>
